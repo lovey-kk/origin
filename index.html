@@ -20,20 +20,21 @@
 </head>
 <body>
     <!-- Header -->
-     <header>
-        <div>
-            <img src="./images/ilchan.ico" alt="logo">
-            <h1><a href="#">Ilchan</a></h1>
+     <header class="header">
+        <!-- BEM -->
+        <div class="header__logo">
+            <img class="header__logo__img" src="./images/ilchan.ico" alt="logo">
+            <h1 class="header__logo__title"><a href="#">Ilchan</a></h1>
         </div>
         
-        <nav>
-            <ul>
-                <li><a href="#home">홈으로</a></li>
-                <li><a href="#about">일찬</a></li>
-                <li><a href="#skill">기술</a></li>
-                <li><a href="#work">포트폴리오</a></li>
-                <li><a href="#license">자격증</a></li>
-                <li><a href="#contact">연락처</a></li>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li><a href="#home" class="header__menu__item active">홈으로</a></li>
+                <li><a href="#about" class="header__menu__item">일찬</a></li>
+                <li><a href="#skill" class="header__menu__item">기술</a></li>
+                <li><a href="#work" class="header__menu__item">포트폴리오</a></li>
+                <li><a href="#license" class="header__menu__item">자격증</a></li>
+                <li><a href="#contact" class="header__menu__item">연락처</a></li>
             </ul>
         </nav>
      </header>
@@ -48,9 +49,9 @@
         </section>
         
         <!-- about -->
-        <section id="about">
-            <h2>황일찬</h2>
-            <p>자기소개: 블라블라블라 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, possimus atque voluptatibus, architecto consectetur aliquam quibusdam consequuntur voluptates odit necessitatibus consequatur? Delectus blanditiis recusandae quidem incidunt, molestias adipisci deleniti vero.</p>
+        <section id="about" class="section max-container">
+            <h2 class="title">황일찬</h2>
+            <p class="description">자기소개: 블라블라블라 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, possimus atque voluptatibus, architecto consectetur aliquam quibusdam consequuntur voluptates odit necessitatibus consequatur? Delectus blanditiis recusandae quidem incidunt, molestias adipisci deleniti vero.</p>
             <ul>
                 <li>
                     <i class="fa-brand fa-html5"></i>
@@ -87,62 +88,65 @@
         </section>
         
         <!-- skill -->
-        <section id="skill">
-            <h2>기술</h2>
-            <p>언어 및 도구</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, saepe dolorem beatae, quam pariatur cum sapiente voluptas distinctio excepturi nam repudiandae modi sunt ea doloremque? Veniam harum impedit cum fuga.</p>
-            <div>
-                <section>
-                    <h3>언어</h3>
-                        <ul>
-                            <li>
-                                <div><span>HTML</span><span>98%</span></div>
-                                <div><div style="width: 98%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>CSS</span><span>90%</span></div>
-                                <div><div style="width: 98%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>Javascript</span><span>80%</span></div>
-                                <div><div style="width: 98%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>React</span><span>98%</span></div>
-                                <div><div style="width: 98%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>Node.js</span><span>75%</span></div>
-                                <div><div style="width: 98%"></div></div>
-                            </li>
-                        </ul>
-                    </section>
-
+        <section id="skills" class="section">
+            <div class="max-container">
+                <h2 class="title">기술</h2>
+                <p class="description">언어 및 도구</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, saepe dolorem beatae, quam pariatur cum sapiente voluptas distinctio excepturi nam repudiandae modi sunt ea doloremque? Veniam harum impedit cum fuga.</p>
+                <div>
                     <section>
-                        <h3>도구</h3>
-                        <ul>
-                            <li>Visual studio Code</li>
-                            <li>Pycharm</li>
-                            <li>Jupyter notebook</li>
-                            <li>colab</li>
-                            <li>Xcode</li>
-                        </ul>
-                    </section>
+                        <h3>언어</h3>
+                            <ul>
+                                <li>
+                                    <div><span>HTML</span><span>98%</span></div>
+                                    <div><div style="width: 98%"></div></div>
+                                </li>
+                                <li>
+                                    <div><span>CSS</span><span>90%</span></div>
+                                    <div><div style="width: 98%"></div></div>
+                                </li>
+                                <li>
+                                    <div><span>Javascript</span><span>80%</span></div>
+                                    <div><div style="width: 98%"></div></div>
+                                </li>
+                                <li>
+                                    <div><span>React</span><span>98%</span></div>
+                                    <div><div style="width: 98%"></div></div>
+                                </li>
+                                <li>
+                                    <div><span>Node.js</span><span>75%</span></div>
+                                    <div><div style="width: 98%"></div></div>
+                                </li>
+                            </ul>
+                        </section>
 
-                    <section>
-                        <h3>기타</h3>
-                        <ul>
-                            <li>Git</li>
-                            <li>Math</li>
-                        </ul>
-                    </section>
+                        <section>
+                            <h3>도구</h3>
+                            <ul>
+                                <li>Visual studio Code</li>
+                                <li>Pycharm</li>
+                                <li>Jupyter notebook</li>
+                                <li>colab</li>
+                                <li>Xcode</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>기타</h3>
+                            <ul>
+                                <li>Git</li>
+                                <li>Math</li>
+                            </ul>
+                        </section>
+                </div>
             </div>           
         </section>
         
         <!-- work -->
-        <section id="work">
-            <h2>포트폴리오</h2>
-            <p>Projects</p>
+        <div id="work" class="section">
+            <div class="max-container">
+            <h2 class="title">포트폴리오</h2>
+            <p class="description">Projects</p>
             <ul>
                 <li><button>ALL <span>10</span></button></li>
                 <li><button>Front-end <span>3</span></button></li>
@@ -223,12 +227,14 @@
                     </a>
                 </li>
             </ul>
+            </div>
         </section>
         
         <!-- license -->
-        <section id="license">
-            <h2>.자격증</h2>
-            <p>국가 기술 자격증</p>
+        <section id="license" class="section">
+            <div class="max-container">
+            <h2 class="title">자격증</h2>
+            <p class="description">국가 기술 자격증</p>
             <ul>
                 <li>
                     <img src="./images/license.PNG" alt="project2">
@@ -255,6 +261,7 @@
                 </div>
                 </li>
             </ul>
+            </div>
         </section>
         
         <!-- contact -->
@@ -268,14 +275,16 @@
          </aside>
      </main>
      <!-- footer -->
-      <footer id="contact">
-        <h2>연락주세요!</h2>
-        <p>dlfcksdlskfk@naver.com</p>
+      <footer id="contact" class="section">
+        <div class="max-container">
+        <h2 class="title">연락주세요!</h2>
+        <p class="description">dlfcksdlskfk@naver.com</p>
         <ul>
             <li><a href="https://github.com/ilchan123" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
             <li><a href="https://github.com/ilchan123" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
         </ul>
         <p>ⓒ Ilchan - All rights reserved</p>
+        </div>
       </footer>
 </body>
 </html>

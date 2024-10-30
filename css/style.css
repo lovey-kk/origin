@@ -4,3 +4,122 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* Global */
+:root {
+    /* Main Colors */
+    --color-primary: var(--color-black);
+    --color-primary-varient: var(--color-gray);
+    --color-accent: var(--color-blue);
+    --color-accent-varient: var(--color-orange);
+    --color-text: var(--color-white);
+
+    /* Colors */
+    --color-white: #fff;
+    --color-black: #050a13;
+    --color-blue: #03e8f9;
+    --color-orange: #fd6413;
+    --color-gray: #1b1e26;
+
+    /* Size */
+    --size-max-width: 1200px;
+}
+
+* {
+    box-sizing: 1200px;
+}
+
+/* 만약 글씨체 다운이 안되면 아래 있는 거로 대체되어 나온다 */
+body {
+    font-family: 'NanumsquareRound', sans-serif;
+    margin: 0;
+}
+
+/* 문자열 사이 간격 줄임 */
+h1, h2, h3, p, ul { margin:0; }
+
+/* 옆에 바짝 붙임 */
+ul { list-style: none; padding: 0;}
+
+/* 링크의 파란줄을 삭제 */
+a { text-decoration: none; color: var(--color-text);}
+
+/* 버튼의 배경 색을 날려버릴 수 있다 */
+button {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+}
+
+/* hover같은 것 */
+button:focus {
+    outline: 1px solid var(--color-accent);
+}
+
+/* px은 고정된 값. pixel 점이 연결된 것 */
+/* 1rem = 16px */
+.section {
+    padding: 4rem; text-align: center;
+}
+
+.max-container {
+    max-width: var(--size-max-width);
+    margin: auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+/* Header */
+.header {
+    background-color: var(--color-primary);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+/* 앞 뒤 순서 정하는 것. -1을 하면 맨 뒤 페이지로 가게된다 */
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__logo__img {
+    width: 36px;
+    height: 36px;
+}
+
+.header__logo__title {
+    font-size: 1.8rem;
+}
+
+.header__menu {
+    display: flex;
+    gap: 40px;
+}
+
+.headr__menu__item {
+    padding: 8px 16px;
+}
+
+.headr__menu__item:hover {
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.headr__menu__item.active {
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+}
