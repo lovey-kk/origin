@@ -111,15 +111,16 @@ button:focus {
     gap: 40px;
 }
 
-.headr__menu__item {
+
+.header__menu__item {
     padding: 8px 16px;
 }
 
-.headr__menu__item:hover {
+.header__menu__item:hover {
     border-bottom: 1px solid var(--color-accent);
 }
 
-.headr__menu__item.active {
+.header__menu__item.active {
     border: 1px solid var(--color-accent);
     border-radius: 4px;
 }
